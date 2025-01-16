@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukáš Drdla</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <button id="toggle-btn" onclick="openSidebar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+    </button>
+        <nav id="navbar">
+            <div class="container-fluid">
+                <ul>
+                    <li><button id="close-btn" onclick="closeSidebar()" aria-label="Close Sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </button></li>
+                    <li><a href="#home" class="active-link" aria-current="page">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact" class="bubble-btn">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+     
+    <div class="container">
+        <!-- Hero -->
+        <div id="home" class="hero">
+            <div class="content">
+                <img src="assets/images/IMG_2843.png" alt="Landscape">
+                <h1>Lukáš Drdla 👋 </h1>
+                <p>
+                    Jsem student softwarového inženýrství. Mým cílem je psát kód, který nejen funguje, ale je také srozumitelný a udržitelný. Mám zkušenosti s projekty od jednodušších webů po složitější systémy.
+                </p>
+                <br>
+                <div class="hobbies">
+                    <p>Ve volném čase: Vyvíjím hry (Unity) 🎮, cestuji 🌍 a hraju tenis 🎾.</p>
+                </div>
+                <br>
+
+                <div class="social-media">
+                    <p>Najdetě mě na:
+                        <span class="social-links">
+                            <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+                            <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+                            <a href="https://github.com/lukasdrdla" target="_blank" class="social-link">Github</a>
+                            <span>⚡️</span>
+                        </span>
+                    </p>
+                </div> 
+
+            </div>
+            <div class="skills">
+                <ul>
+                    <li>.NET</li>
+                    <li>SQL</li>
+                    <li>REST API</li>
+                    <li>Blazor</li>
+                    <li>React</li>
+                </ul>
+            </div>
+
+        </div>
+        
+
+        
+
+        
+
+        <!-- Projects -->
+        <div id="projects" class="projects-section">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/eshop/eshop.png" alt="Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">E-shop + Admin Dashboard (MVC)</h3>
+                        <p class="project-description">
+                            Kompletní systém e-shopu, zahrnující frontend i backend, s možností správy produktů, uživatelů, objednávek a dalších klíčových funkcí přes administrátorské rozhraní.
+                        </p>
+
+                        <p><i>Více info:</i> <a href="https://github.com/lukasdrdla/TicketPortalMVC-v1" target="_blank">Github</a></p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/hotel_project/Snímek obrazovky 2025-01-04 v 17.16.47.png" alt="Project 2" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Hotel Administration System (Blazor)</h3>
+                        <p class="project-description">
+                            HoAP je kompletní hotelový systém postavený na Blazor frameworku, který umožňuje správu rezervací, zákazníků, pokojů, zaměstnanců, plateb a faktur.
+                            <p><i>Více info:</i> <a href="https://github.com/lukasdrdla/Hotel_AdminPanel" target="_blank">Github</a></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/api_project/Snímek obrazovky 2025-01-04 v 11.23.38.png" alt="Project 3" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">API (.NET)</h3>
+                        <p class="project-description">
+                            API pro "Movie Ticket Reservation" v .NET umožňuje uživatelům registraci a přihlášení pomocí JWT Bearer tokenu, přidávání filmů, rezervaci lístků, získání dostupných sedadel pro konkrétní film a další.
+                            <p><i>Více info:</i> <a href="https://github.com/lukasdrdla/MovieR" target="_blank">Github</a></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/testing_project/Snímek obrazovky 2025-01-03 v 19.13.51.png" alt="Project 4" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Testování Software (Selenium)</h3>
+                        <p class="project-description">
+                            Komplexní řešení pro testování software, které zahrnuje automatizované i manuální testovací sady.
+                            <br>
+                            <span><i>"Otestovat všchno je jako snažit se zastavit čas – prostě to nejde!</i> 😄"</span>
+
+                            <p><i>Více info:</i> <a href="https://github.com/lukasdrdla/Testovani_Softwaru" target="_blank">Github</a></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-projects">
+            <p>Více projektů naleznete zde <a href="https://github.com/lukasdrdla" target="_blank">Github</a></p>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <p>
+                Napište mi <a href="mailto:lukas.drdla01@gmail.com" target="_blank">e-mail</a> nebo mě najděte na sociálních sítích – rád se potkám s každou novou výzvou! 😄
+            </p>
+            <a href="mailto:lukas.drdla01@gmail.com" target="_blank">
+                <button class="btn btn-contact">lukas.drdla01@gmail.com</button>
+            </a>        
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lukáš Drdla</p>
+    </footer>
+
+    <div id="particles-js"></div>
+
+    
+      
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+      
+</body>
+</html>
