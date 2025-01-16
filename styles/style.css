@@ -1,0 +1,337 @@
+:root {
+    --background-color: #000000;
+    --text-color: #D7D7D7;
+    --text-color-secondary: #474747;
+    --text-color-active: #bababa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    user-select: none;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--text-color-secondary);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+
+.container {
+    max-width: 600px;
+    margin-inline: auto;
+    padding: 0 20px;
+}
+
+.container-fluid {
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 0 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color-secondary);
+    background-color: var(--text-color);
+}
+
+.btn-contact {
+    border-radius: 20px 20px 0px 20px;
+}
+
+nav {
+    position: fixed; /* Navbar bude pevně na vrchu stránky */
+    background-color: rgba(0, 0, 0, 0.6); /* Tmavě šedá s 30% neprůhledností */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Navbar bude nad ostatními prvky */
+    padding: 10px 20px;
+}
+
+/* Navbar */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-secondary);
+}
+
+nav a.active-link {
+    color: var(--text-color-active);
+}
+
+
+/* Hamburger menu */
+#toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#close-btn {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content img {
+    border-radius: 50%;
+    width: 100px;
+    background-color: var(--text-color-secondary);
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
+.content h2::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 50px;
+    background-color: var(--text-color);
+    margin-top: 5px;
+}
+
+
+/* Kontejner pro sekci */
+.skills {
+    margin-top: 10px;
+}
+
+/* Seznam */
+.skills ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Položky seznamu */
+.skills ul li {
+    margin-left: 30px;
+    padding: 5px 0px;
+    color: var(--text-color-secondary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efekt při najetí myší */
+.skills ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+/* Projects */
+.section-title {
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.projects-section {
+    margin-top: 30px;
+}
+
+/* Project Card */
+.project-card {
+    background-color: #191919;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 22px;
+    color: var(--text-color-secondary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: var(--text-color-secondary);
+    line-height: 1.6;
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--text-color-secondary);
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    margin-top: 100px;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Umístí částice za ostatní obsah */
+  }
+  
+#overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    #toggle-btn, #close-btn {
+        display: block;
+    }
+
+    #toggle-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        width: min(15em, 100%);
+        height: 100vh;
+        z-index: 10;
+        background-color: var(--background-color);
+        transition: right 0.3s ease;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav.active ~ #overlay {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 1em 0;
+    }
+
+    nav ul li a {
+        color: var(--text-color-secondary);
+    }
+
+    .project-card {
+        max-width: 100%;
+    }   
+}
