@@ -345,6 +345,10 @@ footer::before {
     animation: blink 1s ease-in-out infinite;
   }
 
+  .learning {
+    margin-top: 20px;
+  }
+
   @keyframes blink {
     0%, 50% {
       opacity: 1;
