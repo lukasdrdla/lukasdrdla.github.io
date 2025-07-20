@@ -103,3 +103,28 @@ particlesJS("particles-js", {
     retina_detect: true 
   });
 
+
+  const reactProject = document.getElementById("react-project");
+  const eshopProject = document.getElementById("eshop-project");
+  const hotelProject = document.getElementById("hoap-project");
+  const apiProject = document.getElementById("api-project");
+  const testingProject = document.getElementById("selenium-project");
+  
+eshopProject.addEventListener("click", function() {
+    window.open("https://github.com/lukasdrdla/ECommerceMVC", "_blank");
+});
+
+reactProject.addEventListener("click", function() {
+    window.open("https://github.com/lukasdrdla/movie-tracker", "_blank");
+  });
+
+hotelProject.addEventListener("click", function() {
+    window.open("https://github.com/lukasdrdla/HoaP", "_blank");
+});
+testingProject.addEventListener("click", function() {
+    window.open("https://github.com/lukasdrdla/Testovani_Softwaru", "_blank");
+});
+
+apiProject.addEventListener("click", function() {
+    window.open("https://github.com/lukasdrdla/MovieR", "_blank");
+});
